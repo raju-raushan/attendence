@@ -2,13 +2,10 @@ import type { Badge as BadgeType } from '@/lib/types';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Flame } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import { studentData } from '@/lib/mock-data';
 
-interface GamificationCardProps {
-  streak: number;
-  badges: BadgeType[];
-}
-
-export function GamificationCard({ streak, badges }: GamificationCardProps) {
+export function GamificationCard() {
+  const { streak, badges } = studentData;
   return (
     <Card>
       <CardHeader>

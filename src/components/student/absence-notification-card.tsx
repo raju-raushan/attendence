@@ -5,15 +5,12 @@ import { Button } from '@/components/ui/button';
 import { Loader2, BellRing, BellOff } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { checkAbsenceNotifications } from '@/app/student/actions';
-import type { Student } from '@/lib/types';
+import { studentData } from '@/lib/mock-data';
 
-interface AbsenceNotificationCardProps {
-    student: Student;
-}
-
-export function AbsenceNotificationCard({ student }: AbsenceNotificationCardProps) {
+export function AbsenceNotificationCard() {
     const [isLoading, setIsLoading] = useState(false);
     const { toast } = useToast();
+    const student = studentData;
 
     const handleCheck = async () => {
         setIsLoading(true);

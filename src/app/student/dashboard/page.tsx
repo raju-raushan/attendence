@@ -12,10 +12,10 @@ export default function StudentDashboardPage() {
       </div>
       <div className="space-y-6">
         <AttendanceStatsCard percentage={studentData.attendancePercentage} />
-        <GamificationCard streak={studentData.streak} badges={studentData.badges} />
+        <GamificationCard />
       </div>
       <div className="lg:col-span-3">
-        <AbsenceNotificationCard student={studentData} />
+        <AbsenceNotificationCard />
       </div>
     </div>
   );
