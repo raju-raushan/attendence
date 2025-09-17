@@ -1,4 +1,4 @@
-import { Award, Star, TrendingUp, UserCheck, BookOpen, MapPin, Clock } from 'lucide-react';
+import { Award, Star, TrendingUp } from 'lucide-react';
 import type { Student, CourseSession, Badge } from './types';
 
 export const studentData: Student = {
